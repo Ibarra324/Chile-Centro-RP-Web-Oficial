@@ -67,7 +67,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('img/banner-animado.gif'); /* Reemplaza con tu GIF animado */
+    background-image: url('../img/banner-animado.gif'); /* Ajusta la ruta si es necesario */
     background-size: cover;
     opacity: 0.3; /* Ajusta la opacidad */
     animation: pan 10s linear infinite alternate; /* Ejemplo de animación */
@@ -127,14 +127,20 @@ body {
     max-width: 800px;
     margin: 0 auto;
     line-height: 1.6;
+    text-align: left;
 }
 
 /* Estilos para la sección de VIPs */
+.vips-section {
+    background-color: #222; /* Fondo oscuro para resaltar las tarjetas VIP */
+}
+
 .vips-container {
     display: flex;
     justify-content: center;
     gap: 20px;
     flex-wrap: wrap;
+    padding: 20px;
 }
 
 .vip-card {
@@ -144,6 +150,11 @@ body {
     width: 300px;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease-in-out;
+}
+
+.vip-card:hover {
+    transform: translateY(-5px);
 }
 
 .vip-card h3 {
@@ -169,7 +180,13 @@ body {
 
 /* Estilos para la sección de tutoriales (efecto vidrio) */
 .tutorials-section {
-    background-color: #222; /* Fondo oscuro para resaltar el vidrio */
+    background-color: #181818; /* Fondo oscuro para resaltar el vidrio */
+    padding-bottom: 40px;
+}
+
+.tutorials-section h2, .tutorials-section p {
+    color: #eee;
+    text-align: center;
 }
 
 .tutorials-grid {
@@ -228,8 +245,6 @@ body {
     color: #eee;
     text-align: center;
     padding: 20px;
-    position: relative; /* Para posibles animaciones */
-    overflow: hidden;
 }
 
 /* Estilos para la superposición de inicio de sesión con Discord */
