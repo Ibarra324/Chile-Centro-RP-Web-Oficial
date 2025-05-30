@@ -5,53 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chile Centro RolePlay</title>
     <link rel="stylesheet" href="css/styles.css">
-    <script src="js/script.js" defer></script>
-    <style>
-        /* Estilos para las imágenes Base64 */
-        .logo-container img {
-            height: 80px;
-        }
-        .banner-animation {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-size: cover;
-            opacity: 0.3; /* Ajusta la opacidad */
-            animation: pan 10s linear infinite alternate; /* Ejemplo de animación */
-        }
-        .tutorials-grid .tutorial-item img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 5px;
-            margin-bottom: 10px;
-        }
-    </style>
 </head>
 <body>
-    <div id="main-content" style="opacity: 0;">
+    <div id="main-content">
         <header class="main-banner">
-            <div class="banner-animation" style="background-image: url('data:image/gif;base64,TU_CODIGO_BASE64_DEL_BANNER_ANIMADO')"></div>
             <div class="logo-container">
-                <img src="data:image/png;base64,TU_CODIGO_BASE64_DEL_LOGO" alt="Logo de Chile Centro RolePlay">
+                <img src="data:image/png;base64,TU_CODIGO_BASE64_DEL_LOGO" alt="Logo de Chile Centro RolePlay" style="height: 80px;">
             </div>
             <div class="header-right">
                 <div class="discord-counter">
                     Miembros en Discord: <span id="discord-member-count">Cargando...</span>
                 </div>
-                <button id="login-button">Iniciar Sesión con Discord</button>
             </div>
         </header>
 
         <section id="info-section" class="scroll-section">
             <h2>Sobre Nosotros</h2>
             <div class="info-content">
-                <p>¡Bienvenidos a la comunidad de Chile Centro RolePlay! Somos un grupo de jugadores apasionados por el roleplay en un ambiente inmersivo y realista. Nuestro objetivo es crear historias emocionantes y colaborativas dentro del mundo del juego.</p>
-                <p>Aquí encontrarás un espacio para interactuar con otros miembros, participar en eventos únicos y desarrollar tu personaje en un servidor dedicado y bien administrado.</p>
+                <p>¡Bienvenidos a la comunidad de Chile Centro RolePlay!</p>
+                <p>Aquí encontrarás un espacio para interactuar con otros miembros.</p>
                 <p>Únete a nuestra comunidad y sé parte de la historia.</p>
             </div>
-            <div class="loading-indicator">Cargando...</div>
         </section>
 
         <section id="vips-section" class="scroll-section">
@@ -59,39 +33,35 @@
             <div class="vips-container">
                 <div class="vip-card">
                     <h3>VIP Bronce</h3>
-                    <p>Beneficios básicos como acceso anticipado a noticias, un rol especial en Discord y un pequeño boost en la economía del juego.</p>
+                    <p>Beneficios básicos.</p>
                     <button class="buy-button">Comprar</button>
                 </div>
                 <div class="vip-card">
                     <h3>VIP Plata</h3>
-                    <p>Ventajas mejoradas incluyendo mayores boosts económicos, acceso a vehículos exclusivos y prioridad en algunas colas del servidor.</p>
+                    <p>Ventajas mejoradas.</p>
                     <button class="buy-button">Comprar</button>
                 </div>
                 <div class="vip-card">
                     <h3>VIP Oro</h3>
-                    <p>Beneficios premium con los máximos boosts económicos, acceso a propiedades exclusivas, prioridad alta en todas las colas y participación en eventos VIP.</p>
+                    <p>Beneficios premium.</p>
                     <button class="buy-button">Comprar</button>
                 </div>
-                </div>
-            <div class="loading-indicator">Cargando...</div>
+            </div>
         </section>
 
         <section id="tutorials-section" class="scroll-section">
             <h2>Tutoriales</h2>
-            <p>Explora nuestros tutoriales para mejorar tu experiencia en el servidor.</p>
+            <p>Explora nuestros tutoriales.</p>
             <div class="tutorials-grid">
-                <div class="tutorial-item glass-effect">
-                    <img src="data:image/jpg;base64,TU_CODIGO_BASE64_DEL_TUTORIAL_1" alt="Tutorial ¿Cómo empezar?">
+                <div class="tutorial-item">
                     <h3>¿Cómo empezar?</h3>
                     <button class="view-button">Ver Tutorial</button>
                 </div>
-                <div class="tutorial-item glass-effect">
-                    <img src="data:image/jpg;base64,TU_CODIGO_BASE64_DEL_TUTORIAL_2" alt="Tutorial Creación de personaje">
+                <div class="tutorial-item">
                     <h3>Creación de personaje</h3>
                     <button class="view-button">Ver Tutorial</button>
                 </div>
-                </div>
-            <div class="loading-indicator">Cargando...</div>
+            </div>
         </section>
 
         <footer class="main-footer">
@@ -99,15 +69,20 @@
         </footer>
     </div>
 
-    <div id="discord-login-overlay" class="overlay" style="display: none;">
-        <div class="overlay-content">
-            <h2>Iniciar Sesión con Discord</h2>
-            <p>Para acceder a todo el contenido y participar en nuestra comunidad, debes iniciar sesión con tu cuenta de Discord.</p>
-            <p>Asegúrate de haber activado las opciones necesarias en nuestro bot de Discord para una autenticación exitosa.</p>
-            <button id="discord-oauth-redirect">Continuar a Discord</button>
-        </div>
-    </div>
-
-    <script src="js/script.js" defer></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const discordMemberCount = document.getElementById('discord-member-count');
+            async function fetchDiscordMemberCount() {
+                try {
+                    discordMemberCount.textContent = '1234'; // Reemplaza con tu lógica real
+                } catch (error) {
+                    console.error('Error al obtener el número de miembros de Discord:', error);
+                    discordMemberCount.textContent = 'Error';
+                }
+            }
+            fetchDiscordMemberCount();
+            document.getElementById('main-content').style.opacity = 1; // Mostrar el contenido
+        });
+    </script>
 </body>
 </html>
