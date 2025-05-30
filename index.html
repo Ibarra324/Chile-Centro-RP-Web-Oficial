@@ -6,6 +6,28 @@
     <title>Chile Centro RolePlay</title>
     <link rel="stylesheet" href="css/styles.css">
     <script src="js/script.js" defer></script>
+    <style>
+        /* Estilos para las imágenes Base64 */
+        .logo-container img {
+            height: 80px;
+        }
+        .banner-animation {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            opacity: 0.3; /* Ajusta la opacidad */
+            animation: pan 10s linear infinite alternate; /* Ejemplo de animación */
+        }
+        .tutorials-grid .tutorial-item img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+    </style>
 </head>
 <body>
     <div id="loading-screen">
@@ -15,9 +37,9 @@
 
     <div id="main-content" style="display: none;">
         <header class="main-banner">
-            <div class="banner-animation"></div>
+            <div class="banner-animation" style="background-image: url('data:image/gif;base64,TU_CODIGO_BASE64_DEL_BANNER_ANIMADO')"></div>
             <div class="logo-container">
-                <img src="img/logo.png" alt="Logo de Chile Centro RolePlay">
+                <img src="data:image/png;base64,TU_CODIGO_BASE64_DEL_LOGO" alt="Logo de Chile Centro RolePlay">
             </div>
             <div class="header-right">
                 <div class="discord-counter">
@@ -64,12 +86,12 @@
             <p>Explora nuestros tutoriales para mejorar tu experiencia en el servidor.</p>
             <div class="tutorials-grid">
                 <div class="tutorial-item glass-effect">
-                    <img src="img/tutorial1.jpg" alt="Tutorial ¿Cómo empezar?">
+                    <img src="data:image/jpg;base64,TU_CODIGO_BASE64_DEL_TUTORIAL_1" alt="Tutorial ¿Cómo empezar?">
                     <h3>¿Cómo empezar?</h3>
                     <button class="view-button">Ver Tutorial</button>
                 </div>
                 <div class="tutorial-item glass-effect">
-                    <img src="img/tutorial2.jpg" alt="Tutorial Creación de personaje">
+                    <img src="data:image/jpg;base64,TU_CODIGO_BASE64_DEL_TUTORIAL_2" alt="Tutorial Creación de personaje">
                     <h3>Creación de personaje</h3>
                     <button class="view-button">Ver Tutorial</button>
                 </div>
@@ -90,5 +112,7 @@
             <button id="discord-oauth-redirect">Continuar a Discord</button>
         </div>
     </div>
+
+    <script src="js/script.js" defer></script>
 </body>
 </html>
