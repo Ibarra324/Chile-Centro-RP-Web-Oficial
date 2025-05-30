@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chile Centro RolePlay</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    <div id="loading-screen">
+        <div class="loading-animation"></div>
+        <p>Cargando...</p>
+    </div>
+
+    <div id="main-content" style="display: none;">
+        <header class="main-banner">
+            <div class="logo-container">
+                <img src="img/logo.png" alt="Logo de Chile Centro RolePlay">
+            </div>
+            <div class="header-right">
+                <div class="discord-counter">
+                    Miembros en Discord: <span id="discord-member-count">Cargando...</span>
+                </div>
+                <button id="login-button">Iniciar Sesión con Discord</button>
+            </div>
+        </header>
+
+        <section id="info-section" class="scroll-section">
+            <h2>Sobre Nosotros</h2>
+            <div class="info-content">
+                <p>Aquí irá la información sobre nuestra comunidad de Chile Centro RolePlay...</p>
+            </div>
+            <div class="loading-indicator">Cargando...</div>
+        </section>
+
+        <section id="vips-section" class="scroll-section">
+            <h2>Beneficios VIP</h2>
+            <div class="vips-container">
+                <div class="vip-card">
+                    <h3>VIP Bronce</h3>
+                    <p>Beneficios básicos...</p>
+                    <button class="buy-button">Comprar</button>
+                </div>
+                <div class="vip-card">
+                    <h3>VIP Plata</h3>
+                    <p>Ventajas mejoradas...</p>
+                    <button class="buy-button">Comprar</button>
+                </div>
+                </div>
+            <div class="loading-indicator">Cargando...</div>
+        </section>
+
+        <section id="tutorials-section" class="scroll-section">
+            <h2>Tutoriales</h2>
+            <div class="tutorials-grid">
+                <div class="tutorial-item glass-effect">
+                    <img src="img/tutorial1.jpg" alt="Tutorial 1">
+                    <h3>¿Cómo empezar?</h3>
+                    <button class="view-button">Ver Tutorial</button>
+                </div>
+                <div class="tutorial-item glass-effect">
+                    <img src="img/tutorial2.jpg" alt="Tutorial 2">
+                    <h3>Creación de personaje</h3>
+                    <button class="view-button">Ver Tutorial</button>
+                </div>
+                </div>
+            <div class="loading-indicator">Cargando...</div>
+        </section>
+
+        <footer class="main-footer">
+            <p>&copy; 2025 Chile Centro RolePlay</p>
+        </footer>
+    </div>
+
+    <div id="discord-login-overlay" class="overlay" style="display: none;">
+        <div class="overlay-content">
+            <h2>Iniciar Sesión con Discord</h2>
+            <p>Para acceder a todo el contenido, debes iniciar sesión con tu cuenta de Discord.</p>
+            <p>Asegúrate de haber activado las opciones necesarias en nuestro bot de Discord.</p>
+            <button id="discord-oauth-redirect">Continuar a Discord</button>
+        </div>
+    </div>
+</body>
+</html>
