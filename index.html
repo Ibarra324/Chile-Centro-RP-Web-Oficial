@@ -12,12 +12,6 @@
             <div class="logo-container">
                 <img src="data:image/png;base64,TU_CODIGO_BASE64_DEL_LOGO" alt="Logo de Chile Centro RolePlay" style="height: 80px;">
             </div>
-            <div class="header-right">
-                <div class="discord-counter">
-                    Miembros en Discord: <span id="discord-member-count">Cargando...</span>
-                </div>
-            </div>
-        </header>
 
         <section id="info-section" class="scroll-section">
             <h2>Sobre Nosotros</h2>
@@ -69,20 +63,5 @@
         </footer>
     </div>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const discordMemberCount = document.getElementById('discord-member-count');
-            async function fetchDiscordMemberCount() {
-                try {
-                    discordMemberCount.textContent = '1234'; // Reemplaza con tu lógica real
-                } catch (error) {
-                    console.error('Error al obtener el número de miembros de Discord:', error);
-                    discordMemberCount.textContent = 'Error';
-                }
-            }
-            fetchDiscordMemberCount();
-            document.getElementById('main-content').style.opacity = 1; // Mostrar el contenido
-        });
-    </script>
 </body>
 </html>
